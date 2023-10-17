@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
@@ -33,7 +32,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Jetpack_page(getString(R.string.jetpack_paragraph_2))
+                    Jetpack_page()
                 }
             }
         }
@@ -41,7 +40,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Jetpack_page(name: String, modifier: Modifier = Modifier) {
+fun Jetpack_page(modifier: Modifier = Modifier) {
     val imagen = painterResource(id = R.drawable.bg_compose_background)
     Column(
         verticalArrangement = Arrangement.Top,
@@ -82,6 +81,6 @@ fun Jetpack_page(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     JetpackComposeTutorialTheme {
-        Jetpack_page("Android")
+        Jetpack_page()
     }
 }
